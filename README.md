@@ -1,3 +1,3 @@
 ```
-heroku buildpacks:set http://github.com/jincod/dotnet-buildpack.git
+heroku buildpacks:set https://github.com/jincod/dotnet-buildpack
 ```
