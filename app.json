@@ -1,0 +1,11 @@
+{
+  "name": "AspNet5DemoApp",
+  "description": "Demo app",
+  "repository": "https://github.com/jincod/AspNet5DemoApp",
+  "keywords": ["aspnet5", "vnext"],
+  "buildpacks": [
+    {
+      "url": "https://github.com/jincod/dotnet-buildpack"
+    }
+  ]
+}
