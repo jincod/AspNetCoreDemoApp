@@ -19,7 +19,8 @@
         "Microsoft.Framework.Logging.Console": "1.0.0-beta8"
     },
     "commands": {
-        "web": "Microsoft.AspNet.Server.Kestrel"
+        "web": "Microsoft.AspNet.Server.Kestrel",
+        "kestrel": "Microsoft.AspNet.Server.Kestrel --server.urls http://+:\\$PORT"
     },
     "frameworks": {
         "dnx451": { },
