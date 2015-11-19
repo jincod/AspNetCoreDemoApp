@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNet.Builder;
-using Microsoft.AspNet.Hosting;
-using Microsoft.Framework.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace AspNet5DemoApp
 {
@@ -11,7 +10,7 @@ namespace AspNet5DemoApp
             services.AddMvc();
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app)
         {
             app.UseDefaultFiles();
             app.UseStaticFiles();
