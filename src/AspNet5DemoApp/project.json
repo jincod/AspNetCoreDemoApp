@@ -19,7 +19,8 @@
         "Microsoft.AspNet.StaticFiles": "1.0.0-rc1-final"
     },
     "commands": {
-        "web": "Microsoft.AspNet.Server.Kestrel"
+        "web": "Microsoft.AspNet.Server.Kestrel",
+        "dev": "Microsoft.AspNet.Server.Kestrel ASPNET_ENV=development"
     },
     "scripts": {
         "postrestore": ["cd ../.. && npm i && cd src/AspNet5DemoApp"]
