@@ -10,7 +10,8 @@ module.exports = {
 
   output: {
     path: path.join(__dirname, '..', 'src', 'AspNet5DemoApp', 'wwwroot'),
-    filename: "bundle.js"
+    filename: "bundle.js",
+    publicPath: "http://localhost:3000/"
   },
 
   plugins: [

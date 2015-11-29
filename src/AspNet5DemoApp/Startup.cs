@@ -14,7 +14,7 @@ namespace AspNet5DemoApp
         {
             app.UseDefaultFiles();
             app.UseStaticFiles();
-            app.UseMvc();
+            app.UseMvcWithDefaultRoute();
         }
     }
 }

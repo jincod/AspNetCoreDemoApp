@@ -12,6 +12,7 @@
     "dependencies": {
         "Microsoft.AspNet.Server.Kestrel": "1.0.0-rc1-final",
         "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
+        "Microsoft.AspNet.Mvc.TagHelpers": "6.0.0-rc1-final",
         "Microsoft.AspNet.Diagnostics": "1.0.0-rc1-final",
         "Microsoft.AspNet.Hosting": "1.0.0-rc1-final",
         "Microsoft.AspNet.IISPlatformHandler": "1.0.0-rc1-final",
@@ -21,7 +22,7 @@
         "web": "Microsoft.AspNet.Server.Kestrel"
     },
     "scripts": {
-        "prebuild": ["cd ../.. && npm i && cd src/AspNet5DemoApp"]    
+        "postrestore": ["cd ../.. && npm i && cd src/AspNet5DemoApp"]
     },
     "frameworks": {
         "dnx451": { },
