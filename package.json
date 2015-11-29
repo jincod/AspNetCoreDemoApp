@@ -1,0 +1,28 @@
+{
+  "name": "aspnet5demoapp",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Demp app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jincod/AspNet5DemoApp.git"
+  },
+  "dependencies": {
+    "babel": "^6.1.5",
+    "babel-core": "^6.1.4",
+    "babel-loader": "^6.1.0",
+    "babel-preset-es2015": "^6.1.4",
+    "css-loader": "^0.22.0",
+    "express": "^4.10.1",
+    "extract-text-webpack-plugin": "^0.9.1",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.4",
+    "webpack-dev-middleware": "^1.2.0",
+    "webpack-hot-middleware": "^2.5.0"
+  },
+  "scripts": {
+    "dev": "node devServer.js",
+    "build": "webpack",
+    "postinstall": "if [ \"$NODE_ENV\" = production ]; then npm build webpack; fi"
+  }
+}

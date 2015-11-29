@@ -191,3 +191,5 @@ ModelManifest.xml
 
 .vs
 project.lock.json
+
+node_modules

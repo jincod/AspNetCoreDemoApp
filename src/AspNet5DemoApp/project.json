@@ -20,6 +20,9 @@
     "commands": {
         "web": "Microsoft.AspNet.Server.Kestrel"
     },
+    "scripts": {
+        "prebuild": ["cd ../.. && npm i && cd src/AspNet5DemoApp"]    
+    },
     "frameworks": {
         "dnx451": { },
         "dnxcore50": { }
