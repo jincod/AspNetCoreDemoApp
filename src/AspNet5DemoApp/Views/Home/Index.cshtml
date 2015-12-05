@@ -23,23 +23,11 @@
 				<li class="loading">Loading...</li>
 			</ul>
 		</div>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/superagent/1.2.0/superagent.min.js"></script>
-		
 		<environment names="Development">
 			<script src="http://localhost:3000/bundle.js"></script>
 		</environment>
 		<environment names="Production">
 			<script src="/bundle.js"></script>
 		</environment>
-		<script>
-			superagent
-				.get('/api/values')
-				.end(function(err, res) {
-					var items = res.body.map(function(item) {
-						return '<li class="list-group-item">' + item + '</li>';
-					});
-					document.querySelector('.js-result').innerHTML = items.join('');
-				});
-		</script>
 	</body>
 </html>
