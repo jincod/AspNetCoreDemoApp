@@ -9,5 +9,5 @@ Click the button below to set up this sample app on Heroku:
 
 ## Blog posts
 
-- http://jincod.tumblr.com/post/135043543538/integrate-aspnet-5-and-webpack-with-hot-module
-- http://jincod.tumblr.com/post/131004166948/deploying-aspnet-5-on-heroku
+- [Integrate ASP.NET 5 and Webpack with Hot Module Replacement plugin](http://jincod.tumblr.com/post/135043543538/integrate-aspnet-5-and-webpack-with-hot-module)
+- [Deploying asp.net 5 on heroku](http://jincod.tumblr.com/post/131004166948/deploying-aspnet-5-on-heroku)
