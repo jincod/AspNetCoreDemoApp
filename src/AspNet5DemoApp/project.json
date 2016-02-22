@@ -23,7 +23,7 @@
         "dev": "Microsoft.AspNet.Server.Kestrel ASPNET_ENV=development"
     },
     "scripts": {
-        "postrestore": ["cd ../.. && npm i && cd src/AspNet5DemoApp"]
+        "postrestore": ["[ \"$NODE_ENV\" != production ] && cd ../.. && npm i && cd src/AspNet5DemoApp || exit 0"]
     },
     "frameworks": {
         "dnx451": { },
