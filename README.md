@@ -1,6 +1,7 @@
 ## Custom build pack
 ```
-heroku buildpacks:set https://github.com/jincod/dotnet-buildpack
+heroku buildpacks:set https://github.com/jincod/dotnet-buildpack --index 2
+heroku buildpacks:add --index 1 heroku/nodejs
 ```
 ## Deploy to Heroku
 Click the button below to set up this sample app on Heroku:
