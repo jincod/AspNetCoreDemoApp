@@ -1,6 +1,0 @@
-#!/bin/sh
-
-echo \$ which npm
-which npm
-echo \$ npm
-npm
