@@ -5,7 +5,7 @@
   "description": "Demp app",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jincod/AspNet5DemoApp.git"
+    "url": "https://github.com/Wyntuition/AspNet5DemoApp"
   },
   "dependencies": {
     "babel": "^6.1.5",
