@@ -1,14 +1,14 @@
 {
   "name": "AspNet5DemoApp",
-  "description": "Demo app",
+  "description": "Demo app on ASP.NET Core",
   "repository": "https://github.com/jincod/AspNet5DemoApp",
-  "keywords": ["aspnet5", "vnext"],
+  "keywords": ["aspnet", "core"],
   "buildpacks": [
     {
       "url": "https://github.com/heroku/heroku-buildpack-nodejs"
     },
     {
-      "url": "https://github.com/jincod/dotnet-buildpack"
+      "url": "https://github.com/jincod/dotnetcore-buildpack"
     }
   ]
 }

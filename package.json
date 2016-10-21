@@ -2,7 +2,7 @@
   "name": "aspnet5demoapp",
   "version": "0.0.1",
   "private": true,
-  "description": "Demp app",
+  "description": "Demo app",
   "repository": {
     "type": "git",
     "url": "https://github.com/jincod/AspNet5DemoApp.git"
