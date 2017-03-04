@@ -13,7 +13,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="**\*.cs" />
-    <Content Include="wwwroot;web.config;Views\**\*;bundle.js">
+    <Content Include="web.config;Views\**\*">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
   </ItemGroup>
@@ -50,7 +50,7 @@
       <Version>1.1.0-preview4-final</Version>
     </DotNetCliToolReference>
   </ItemGroup>
-  <Target Name="PostrestoreScript" AfterTargets="Restore">
+  <Target Name="PreCompileTarget" BeforeTargets="Build">
     <Exec Command="npm install" />
   </Target>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
