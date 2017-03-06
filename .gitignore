@@ -195,3 +195,4 @@ ModelManifest.xml
 project.lock.json
 
 node_modules
+**/wwwroot/bundle.js
