@@ -10,10 +10,12 @@
     <RuntimeFrameworkVersion>1.1.0</RuntimeFrameworkVersion>
     <PackageTargetFallback>$(PackageTargetFallback);dotnet5.6;portable-net45+win8</PackageTargetFallback>
     <RootNamespace>AspNet5DemoApp</RootNamespace>
+    <GeneratedItemPatterns>wwwroot/**</GeneratedItemPatterns>
+    <DefaultItemExcludes>$(DefaultItemExcludes);$(GeneratedItemPatterns)</DefaultItemExcludes>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="**\*.cs" />
-    <Content Include="wwwroot\**\*;Views\**\*;web.config">
+    <Content Include="Views\**\*;web.config">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
   </ItemGroup>
@@ -51,10 +53,15 @@
     </DotNetCliToolReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="obj\Release\netcoreapp1.1" />
     <Folder Include="wwwroot" />
   </ItemGroup>
-  <Target Name="PrePublishTarget" BeforeTargets="Publish">
+  <Target Name="PrePublishTarget" BeforeTargets="PrepareForPublish">
     <Exec Command="npm run build" />
+    <ItemGroup>
+      <_GeneratedFiles Include="$(GeneratedItemPatterns)" />
+      <ContentWithTargetPath Include="@(_GeneratedFiles->'%(FullPath)')" RelativePath="%(_GeneratedFiles.Identity)" TargetPath="%(_GeneratedFiles.Identity)" CopyToPublishDirectory="PreserveNewest" />
+    </ItemGroup>
   </Target>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <DefineConstants>$(DefineConstants);RELEASE</DefineConstants>
