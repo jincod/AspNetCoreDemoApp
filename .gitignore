@@ -190,6 +190,9 @@ _Pvt_Extensions/
 ModelManifest.xml
 
 .vs
+.idea
+.vscode
 project.lock.json
 
 node_modules
+**/wwwroot/**/*

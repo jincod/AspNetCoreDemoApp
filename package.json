@@ -22,7 +22,6 @@
   },
   "scripts": {
     "dev": "node devServer.js",
-    "build": "webpack",
-    "postinstall": "if [ \"$NODE_ENV\" = production ]; then npm run build; fi"
+    "build": "webpack"
   }
 }
