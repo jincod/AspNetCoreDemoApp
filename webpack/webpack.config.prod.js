@@ -7,7 +7,7 @@ module.exports = {
   entry: ['./src/client/index.js'],
 
   output: {
-    path: path.join(__dirname, '..', 'src', 'AspNet5DemoApp', 'wwwroot'),
+    path: path.join(__dirname, '..', 'src', 'AspNetCoreDemoApp', 'wwwroot'),
     filename: "bundle.js"
   },
 

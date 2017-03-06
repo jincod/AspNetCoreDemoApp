@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace AspNet5DemoApp.Controllers
+namespace AspNetCoreDemoApp.Controllers
 {
     public class HomeController : Controller
     {

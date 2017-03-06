@@ -4,12 +4,12 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp1.1</TargetFramework>
     <PreserveCompilationContext>true</PreserveCompilationContext>
-    <AssemblyName>AspNet5DemoApp</AssemblyName>
+    <AssemblyName>AspNetCoreDemoApp</AssemblyName>
     <OutputType>Exe</OutputType>
-    <PackageId>AspNet5DemoApp</PackageId>
+    <PackageId>AspNetCoreDemoApp</PackageId>
     <RuntimeFrameworkVersion>1.1.0</RuntimeFrameworkVersion>
     <PackageTargetFallback>$(PackageTargetFallback);dotnet5.6;portable-net45+win8</PackageTargetFallback>
-    <RootNamespace>AspNet5DemoApp</RootNamespace>
+    <RootNamespace>AspNetCoreDemoApp</RootNamespace>
     <GeneratedItemPatterns>wwwroot/**</GeneratedItemPatterns>
     <DefaultItemExcludes>$(DefaultItemExcludes);$(GeneratedItemPatterns)</DefaultItemExcludes>
   </PropertyGroup>
