@@ -1,9 +1,12 @@
 ## Custom build pack
+
 ```
 heroku buildpacks:set https://github.com/jincod/dotnetcore-buildpack --index 2
-heroku buildpacks:add --index 1 heroku/nodejs
+heroku buildpacks:add heroku/nodejs --index 1
 ```
+
 ## Deploy to Heroku
+
 Click the button below to set up this sample app on Heroku:
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/jincod/AspNet5DemoApp)

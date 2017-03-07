@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26114.2
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet5DemoApp", "src\AspNet5DemoApp\AspNet5DemoApp.csproj", "{4EBD18BC-DA63-46F9-9300-9ED26CA9C534}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreDemoApp", "src\AspNetCoreDemoApp\AspNetCoreDemoApp.csproj", "{4EBD18BC-DA63-46F9-9300-9ED26CA9C534}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

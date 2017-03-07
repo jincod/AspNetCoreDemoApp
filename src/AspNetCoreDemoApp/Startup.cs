@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace AspNet5DemoApp
+namespace AspNetCoreDemoApp
 {
     public class Startup
     {
