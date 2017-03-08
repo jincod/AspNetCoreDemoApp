@@ -1,13 +1,26 @@
-## Custom build pack
+## Usage
 
+```bash
+npm install
+cd src/AspNetCoreDemoApp
+dotnet restore
+dotnet run
 ```
+
+## Deploy to Heroku
+
+### Manual
+
+Using custom buildpack [dotnetcore-buildpack](https://github.com/jincod/dotnetcore-buildpack)
+
+```bash
 heroku buildpacks:set https://github.com/jincod/dotnetcore-buildpack
 heroku buildpacks:add --index 1 heroku/nodejs
 ```
 
 [Using Multiple Buildpacks for an App](https://devcenter.heroku.com/articles/using-multiple-buildpacks-for-an-app)
 
-## Deploy to Heroku
+### Heroku Deploy button
 
 Click the button below to set up this sample app on Heroku:
 
