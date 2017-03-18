@@ -1,3 +1,7 @@
+# ASP.NET Core Demo App
+
+[![Build status](https://ci.appveyor.com/api/projects/status/p3iet9wrmg8jxlmx?svg=true)](https://ci.appveyor.com/project/jincod/aspnet5demoapp)
+
 ## Usage
 
 ```bash
