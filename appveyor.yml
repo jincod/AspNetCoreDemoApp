@@ -1,10 +1,6 @@
 version: 1.0.{build}
 image: Visual Studio 2017
 
-configuration:
-  - Debug
-  - Release
-
 build_script:
   - dotnet restore
-  - dotnet build --configuration $(configuration)
+  - dotnet build --configuration Release
