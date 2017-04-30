@@ -3,6 +3,7 @@
   "description": "Demo app on ASP.NET Core",
   "repository": "https://github.com/jincod/AspNet5DemoApp",
   "keywords": ["aspnet", "core"],
+  "stack": "heroku-16",
   "buildpacks": [
     {
       "url": "https://github.com/heroku/heroku-buildpack-nodejs"
