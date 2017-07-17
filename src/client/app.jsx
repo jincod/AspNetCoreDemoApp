@@ -22,8 +22,8 @@ export default class List extends Component {
 			<div>
 				<h1>Values</h1>
 				{
-					items.map(item => (
-						<li class="list-group-item">
+					items.map((item, index) => (
+						<li key={index} className="list-group-item">
 							{item}
 						</li>
 					))
