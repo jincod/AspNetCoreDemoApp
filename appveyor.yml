@@ -2,4 +2,4 @@ version: 1.0.{build}
 image: Visual Studio 2017
 
 build_script:
-  - docker run --rm -it -v c:/projects/aspnet5demoapp:/app --workdir /app microsoft/aspnetcore-build:2.0.0-preview2-stretch bash -c "dotnet restore && dotnet publish src/AspNetCoreDemoApp/AspNetCoreDemoApp.csproj -c Release -o /app/build"
+  - docker build -t aspnetcoredemoapp .
