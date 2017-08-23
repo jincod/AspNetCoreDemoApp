@@ -23,6 +23,10 @@
   </ItemGroup>
 
   <Target Name="PrePublishTarget" BeforeTargets="PrepareForPublish">
+    <Exec Command="git rev-parse --short HEAD" ConsoleToMSBuild="true">
+      <Output TaskParameter="ConsoleOutput" PropertyName="GitRevision" />
+    </Exec>
+    <Exec Command="echo REACT_APP_REVISION=$(GitRevision)>> ../../.env" />
     <Exec Command="npm run build" />
     <ItemGroup>
       <_GeneratedFiles Include="$(GeneratedItemPatterns)" />

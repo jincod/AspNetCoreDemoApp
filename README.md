@@ -7,8 +7,8 @@
 ```bash
 npm install
 dotnet restore
-dotnet run -p src/AspNetCoreDemoApp.csproj
-node devServer.js
+dotnet run -p src/AspNetCoreDemoApp/AspNetCoreDemoApp.csproj
+npm start
 ```
 
 ## Deploy to Heroku
