@@ -28,7 +28,6 @@ export default class List extends Component {
 						</li>
 					))
 				}
-				<p>Revision: {process.env.REACT_APP_REVISION}</p>
 			</div>
 		);
 	}
