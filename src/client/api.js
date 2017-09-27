@@ -1,5 +1,3 @@
-const REACT_APP_BASE_API_URL = process.env.REACT_APP_BASE_API_URL || '';
-
 function handleErrors(response) {
 	if (!response.ok) {
 		throw Error(response.statusText);
@@ -8,7 +6,7 @@ function handleErrors(response) {
 }
 
 function getValues() {
-	return fetch(`${REACT_APP_BASE_API_URL}/api/values`)
+	return fetch('/api/values')
 		.then(handleErrors)
 		.then(response => response.json())
 		.catch(err => alert(err));

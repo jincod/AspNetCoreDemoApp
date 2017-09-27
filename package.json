@@ -15,5 +15,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build"
+  },
+  "proxy": {
+    "/api": {
+      "target": "http://localhost:5000"
+    }
   }
 }
