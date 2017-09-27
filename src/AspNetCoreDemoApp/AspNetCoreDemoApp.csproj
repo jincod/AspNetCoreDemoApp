@@ -23,6 +23,7 @@
   </ItemGroup>
 
   <Target Name="PrePublishTarget" BeforeTargets="PrepareForPublish">
+    <Exec Command="npm install" />
     <Exec Command="npm run build" />
     <ItemGroup>
       <_GeneratedFiles Include="$(GeneratedItemPatterns)" />
