@@ -1,5 +1,7 @@
 # ASP.NET Core Demo App
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/jincod/AspNet5DemoApp.svg)](https://greenkeeper.io/)
+
 [![Build status](https://ci.appveyor.com/api/projects/status/p3iet9wrmg8jxlmx?svg=true)](https://ci.appveyor.com/project/jincod/aspnet5demoapp)
 
 ## Usage
