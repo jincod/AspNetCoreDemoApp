@@ -2,8 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
-    <GeneratedItemPatterns>wwwroot/**</GeneratedItemPatterns>
-    <DefaultItemExcludes>$(DefaultItemExcludes);$(GeneratedItemPatterns)</DefaultItemExcludes>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,8 +24,6 @@
     <Exec Command="npm install" />
     <Exec Command="npm run build" />
     <ItemGroup>
-      <_GeneratedFiles Include="$(GeneratedItemPatterns)" />
-      <ContentWithTargetPath Include="@(_GeneratedFiles->'%(FullPath)')" RelativePath="%(_GeneratedFiles.Identity)" TargetPath="%(_GeneratedFiles.Identity)" CopyToPublishDirectory="PreserveNewest" />
       <Dist Include="../../build/**" />
     </ItemGroup>
     <Copy SourceFiles="@(Dist)" DestinationFolder="$(PublishDir)\wwwroot\%(RecursiveDir)" SkipUnchangedFiles="true" />
