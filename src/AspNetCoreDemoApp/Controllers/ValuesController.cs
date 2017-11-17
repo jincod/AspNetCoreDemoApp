@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AspNetCoreDemoApp.Controllers
 {
 	[Route("api/[controller]")]
-	public class ValuesController : Controller
+	public class ValuesController : ControllerBase
 	{
 		// GET: api/values
 		[HttpGet]
