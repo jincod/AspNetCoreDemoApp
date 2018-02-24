@@ -8,9 +8,9 @@
     "url": "https://github.com/jincod/AspNet5DemoApp.git"
   },
   "dependencies": {
-    "react": "16.1.1",
-    "react-dom": "16.1.1",
-    "react-scripts": "1.0.17"
+    "react": "16.2.0",
+    "react-dom": "16.2.0",
+    "react-scripts": "1.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
