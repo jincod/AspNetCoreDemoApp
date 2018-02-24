@@ -16,16 +16,16 @@ namespace AspNetCoreDemoApp
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            app.UseDefaultFiles();
-            app.UseStaticFiles();
-
-            app.UseCors(builder =>
-                builder.AllowAnyOrigin()
-                    .AllowAnyMethod()
-                    .AllowAnyHeader()
-                    .AllowCredentials()
-            );
-            app.UseMvcWithDefaultRoute();
+            app
+                .UseDefaultFiles()
+                .UseStaticFiles()
+                .UseCors(builder =>
+                    builder.AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader()
+                        .AllowCredentials()
+                )
+                .UseMvcWithDefaultRoute();
         }
     }
 }
