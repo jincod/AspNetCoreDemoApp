@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
+    <LangVersion>7.1</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -18,7 +19,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel" Version="2.1.0" />
   </ItemGroup>
 
-  <Target Name="PrePublishTarget" BeforeTargets="PrepareForPublish">
+  <Target Name="PrePublishTarget" BeforeTargets="PrepareForPublish" Condition="$(IS_DOCKER_ENV) != 'true'">
     <Exec Command="npm install" />
     <Exec Command="npm run build" />
     <ItemGroup>
