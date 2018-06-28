@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Rewrite;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace AspNetCoreDemoApp
@@ -26,6 +27,14 @@ namespace AspNetCoreDemoApp
                         .AllowCredentials()
                 )
                 .UseMvcWithDefaultRoute();
+
+            if (env.IsProduction())
+            {
+                var options = new RewriteOptions()
+                    .AddRedirectToHttpsPermanent();
+
+                app.UseRewriter(options);
+            }
         }
     }
 }
