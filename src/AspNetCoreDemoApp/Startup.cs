@@ -1,3 +1,4 @@
+using System;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Rewrite;
@@ -30,6 +31,7 @@ namespace AspNetCoreDemoApp
 
             if (env.IsProduction())
             {
+                Console.WriteLine("https");
                 var options = new RewriteOptions()
                     .AddRedirectToHttpsPermanent();
 

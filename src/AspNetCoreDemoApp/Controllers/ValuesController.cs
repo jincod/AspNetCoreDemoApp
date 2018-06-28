@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AspNetCoreDemoApp.Controllers
@@ -10,6 +12,9 @@ namespace AspNetCoreDemoApp.Controllers
 		[HttpGet]
 		public IEnumerable<string> Get()
 		{
+		    Console.WriteLine(Request.GetDisplayUrl());
+		    Console.WriteLine(Request.GetEncodedUrl());
+
 			return new[] { "value1", "value2" };
 		}
 
