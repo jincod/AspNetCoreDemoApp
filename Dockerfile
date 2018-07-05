@@ -7,7 +7,6 @@ RUN npm install --progress=true --loglevel=silent
 RUN npm run build
 
 FROM microsoft/dotnet:2.1-sdk-alpine AS builder
-ENV IS_DOCKER_ENV=true
 WORKDIR /source
 COPY . .
 RUN dotnet restore

@@ -20,7 +20,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel" Version="2.1.1" />
   </ItemGroup>
 
-  <Target Name="PrePublishTarget" BeforeTargets="PrepareForPublish" Condition="$(IS_DOCKER_ENV) != 'true'">
+  <Target Name="PrePublishTarget" BeforeTargets="PrepareForPublish" Condition="$(DOTNET_RUNNING_IN_CONTAINER) != 'true'">
     <Exec Command="npm install" />
     <Exec Command="npm run build" />
     <ItemGroup>
