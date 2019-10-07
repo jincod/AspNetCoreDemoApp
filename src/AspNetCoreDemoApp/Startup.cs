@@ -12,24 +12,28 @@ namespace AspNetCoreDemoApp
         {
             services
                 .AddMvcCore()
-                .AddCors()
-                .AddJsonFormatters();
+                .AddCors(options =>
+                {
+                    options.AddPolicy("CorsPolicy",
+                        builder => builder.AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader());
+                });
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             app
+                .UseRouting()
                 .UseDefaultFiles()
                 .UseStaticFiles()
-                .UseCors(builder =>
-                    builder.AllowAnyOrigin()
-                        .AllowAnyMethod()
-                        .AllowAnyHeader()
-                        .AllowCredentials()
-                )
-                .UseMvcWithDefaultRoute();
+                .UseCors("CorsPolicy")
+                .UseEndpoints(endpoints =>
+                {
+                    endpoints.MapDefaultControllerRoute();
+                });
 
-            if (env.IsProduction())
+            if (env.EnvironmentName == "Production")
             {
                 Console.WriteLine("https");
                 var options = new RewriteOptions()
