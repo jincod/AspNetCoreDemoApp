@@ -17,4 +17,5 @@ FROM mcr.microsoft.com/dotnet/core/aspnet:3.0-alpine
 WORKDIR /app
 COPY --from=builder /app .
 COPY --from=node /app/build ./wwwroot
+ENV ASPNETCORE_URLS=http://*:$PORT
 ENTRYPOINT ["./AspNetCoreDemoApp"]
