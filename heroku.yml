@@ -3,7 +3,7 @@ build:
     web: Dockerfile
 run:
   web: /bin/sh -c ASPNETCORE_URLS=http://+:\$PORT\ ./AspNetCoreDemoApp
-release:
-  image: web
-  command:
-    - echo 'Starting server after deployment!';
+# release:
+#   image: web
+#   command:
+#     - echo 'Starting server after deployment!';
