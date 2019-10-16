@@ -35,10 +35,8 @@ namespace AspNetCoreDemoApp
 
             if (env.EnvironmentName == "Production")
             {
-                Console.WriteLine("https");
                 var options = new RewriteOptions()
                     .AddRedirectToHttpsPermanent();
-
                 app.UseRewriter(options);
             }
         }
