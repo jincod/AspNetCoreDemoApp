@@ -2,7 +2,7 @@ build:
   docker:
     web: Dockerfile
 run:
-  web: /bin/sh -c ASPNETCORE_URLS=http://+:\$PORT\ ./AspNetCoreDemoApp
+  web: ASPNETCORE_URLS=http://+:$PORT ./AspNetCoreDemoApp
 # release:
 #   image: web
 #   command:
