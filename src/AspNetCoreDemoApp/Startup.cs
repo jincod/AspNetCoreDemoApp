@@ -33,7 +33,7 @@ namespace AspNetCoreDemoApp
         {
             app.UseForwardedHeaders();
 
-            if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("HEROKU_APP_NAME")))
+            if (Environment.GetEnvironmentVariable("IS_HEROKU") == "true")
             {
                 Console.WriteLine("Use https redirection");
                 app.UseHttpsRedirection();
