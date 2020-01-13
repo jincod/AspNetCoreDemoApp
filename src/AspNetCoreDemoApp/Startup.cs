@@ -1,7 +1,6 @@
 using System;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Rewrite;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace AspNetCoreDemoApp
@@ -11,6 +10,7 @@ namespace AspNetCoreDemoApp
         public void ConfigureServices(IServiceCollection services)
         {
             services
+                .AddHttpsRedirection(options => { options.HttpsPort = 443; })
                 .AddMvcCore()
                 .AddCors(options =>
                 {
@@ -19,10 +19,26 @@ namespace AspNetCoreDemoApp
                         .AllowAnyMethod()
                         .AllowAnyHeader());
                 });
+
+            services.Configure<ForwardedHeadersOptions>(options =>
+            {
+                options.ForwardedHeaders = ForwardedHeaders.XForwardedFor |
+                                           ForwardedHeaders.XForwardedProto;
+                options.KnownNetworks.Clear();
+                options.KnownProxies.Clear();
+            });
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app)
         {
+            app.UseForwardedHeaders();
+
+            if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("DYNO")))
+            {
+                Console.WriteLine("Use https redirection");
+                app.UseHttpsRedirection();
+            }
+
             app
                 .UseRouting()
                 .UseDefaultFiles()
@@ -32,13 +48,6 @@ namespace AspNetCoreDemoApp
                 {
                     endpoints.MapDefaultControllerRoute();
                 });
-
-            if (env.EnvironmentName == "Production")
-            {
-                var options = new RewriteOptions()
-                    .AddRedirectToHttpsPermanent();
-                app.UseRewriter(options);
-            }
         }
     }
 }
